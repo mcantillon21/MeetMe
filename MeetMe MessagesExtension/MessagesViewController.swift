@@ -20,6 +20,8 @@ class MessagesViewController: MSMessagesAppViewController{
     @IBOutlet weak var label: UILabel!
     var actualDate: Date = Date()
     
+    @IBOutlet weak var SelectButton: UIButton!
+    
     private lazy var dateTimePicker: DateTimePicker = {
         let picker = DateTimePicker()
         picker.setup()
@@ -65,12 +67,32 @@ class MessagesViewController: MSMessagesAppViewController{
         // Do any additional setup after loading the view.
         let gestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(backgroundTap(gesture:)));
         view.addGestureRecognizer(gestureRecognizer)
+        
     }
 
+    
     @IBAction func createEventinTheCalendar(_ sender: Any) {
         var component = DateComponents()
         component.minute = actualDuration
-        createEventinTheCalendar(with: "Meet", forDate: actualDate, toDate: Calendar.current.date(byAdding: component, to: actualDate)!)
+        createEventinTheCalendar(with: "Sync", forDate: actualDate, toDate: Calendar.current.date(byAdding: component, to: actualDate)!)
+        
+        //create alert to confirm
+        let alert = UIAlertController(title: "Added to Calendar", message: "The event has been added to your calendar.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            switch action.style{
+                case .default:
+                print("default")
+                
+                case .cancel:
+                print("cancel")
+                
+                case .destructive:
+                print("destructive")
+                
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
     }
     func createEventinTheCalendar(with title:String, forDate eventStartDate:Date, toDate eventEndDate:Date) {
            
@@ -106,8 +128,6 @@ class MessagesViewController: MSMessagesAppViewController{
     
     @IBAction func didPress(button sender: AnyObject) {
         if let image = createImageForMessage(), let conversation = activeConversation {
-            
-            
             let layout = MSMessageTemplateLayout()
             layout.image = image
             layout.caption = "Be there or be square!"
@@ -202,9 +222,16 @@ class MessagesViewController: MSMessagesAppViewController{
     
     private func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
         
+//        if presentationStyle == .expanded {
+//            SelectButton.isHidden = true
+//            let controller: UIViewController = storyboard!.instantiateViewController(withIdentifier: "MeetMeViewController") as! MessagesViewController
+//            addChild(controller)
+//            view.addSubview(controller.view)
+//        } else {
         let controller: UIViewController = storyboard!.instantiateViewController(withIdentifier: "MeetMeViewController") as! MessagesViewController
         addChild(controller)
         view.addSubview(controller.view)
+//        }
     }
 
 }

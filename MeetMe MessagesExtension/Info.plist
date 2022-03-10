@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSCalendarsUsageDescription</key>
-	<string>ok</string>
+	<string>Add to your Calendar</string>
 	<key>NSRemindersUsageDescription</key>
 	<string>Add to your Calendar</string>
 	<key>NSExtension</key>
