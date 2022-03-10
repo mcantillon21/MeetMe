@@ -18,6 +18,7 @@ class DateTimePicker: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
     let pickerView = UIPickerView()
     pickerView.delegate = self
     pickerView.dataSource = self
+    pickerView.backgroundColor = .white
     return pickerView
   }()
   
@@ -29,6 +30,7 @@ class DateTimePicker: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
   let timeFormatter = DateFormatter()
   
   var inputView: UIView {
+      pickerView.backgroundColor = .white
     return pickerView
   }
   
@@ -68,6 +70,7 @@ class DateTimePicker: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
       label = UILabel()
     }
     
+    label.backgroundColor = .white
     label.textColor = .black
     label.textAlignment = .center
     label.font = UIFont.systemFont(ofSize: 15)

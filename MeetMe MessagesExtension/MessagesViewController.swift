@@ -41,7 +41,10 @@ class MessagesViewController: MSMessagesAppViewController{
     @IBAction func thirty(sender: UIButton) {
         duration = "30 min"
         actualDuration = 30
-
+    }
+    @IBAction func fourtyfive(sender: UIButton) {
+        duration = "45 min"
+        actualDuration = 45
     }
     @IBAction func sixty(sender: UIButton) {
         duration = "60 min"

@@ -15,7 +15,6 @@
 		C80939FE27D09CF100E8FE85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80939FD27D09CF100E8FE85 /* Assets.xcassets */; };
 		C8093A0A27D09D9C00E8FE85 /* DateTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8093A0927D09D9C00E8FE85 /* DateTimePicker.swift */; };
 		C8AC766227D9B444000CBF82 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8AC766127D9B444000CBF82 /* EventKit.framework */; };
-		C8BA6A6C27D3044700CF10AA /* ExpandedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA6A6B27D3044700CF10AA /* ExpandedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +53,6 @@
 		C80A574D27D9BE8600EC64A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C8AC766127D9B444000CBF82 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		C8AC766927D9BB88000CBF82 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8BA6A6B27D3044700CF10AA /* ExpandedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				C80939F827D09CF000E8FE85 /* MessagesViewController.swift */,
-				C8BA6A6B27D3044700CF10AA /* ExpandedViewController.swift */,
 				C80939FA27D09CF000E8FE85 /* MainInterface.storyboard */,
 				C80939FD27D09CF100E8FE85 /* Assets.xcassets */,
 				C8AC766927D9BB88000CBF82 /* Info.plist */,
@@ -219,7 +216,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8BA6A6C27D3044700CF10AA /* ExpandedViewController.swift in Sources */,
 				C8093A0A27D09D9C00E8FE85 /* DateTimePicker.swift in Sources */,
 				C80939F927D09CF000E8FE85 /* MessagesViewController.swift in Sources */,
 			);
