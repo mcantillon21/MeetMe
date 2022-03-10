@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C80939EB27D09CF000E8FE85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80939EA27D09CF000E8FE85 /* Assets.xcassets */; };
+		C80939F127D09CF000E8FE85 /* MeetMe MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C80939F027D09CF000E8FE85 /* MeetMe MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C80939F627D09CF000E8FE85 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C80939F527D09CF000E8FE85 /* Messages.framework */; };
+		C80939F927D09CF000E8FE85 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80939F827D09CF000E8FE85 /* MessagesViewController.swift */; };
+		C80939FC27D09CF000E8FE85 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C80939FA27D09CF000E8FE85 /* MainInterface.storyboard */; };
+		C80939FE27D09CF100E8FE85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80939FD27D09CF100E8FE85 /* Assets.xcassets */; };
+		C8093A0A27D09D9C00E8FE85 /* DateTimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8093A0927D09D9C00E8FE85 /* DateTimePicker.swift */; };
+		C8AC766227D9B444000CBF82 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8AC766127D9B444000CBF82 /* EventKit.framework */; };
+		C8BA6A6C27D3044700CF10AA /* ExpandedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA6A6B27D3044700CF10AA /* ExpandedViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C80939F227D09CF000E8FE85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C80939E127D09CED00E8FE85 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C80939EF27D09CF000E8FE85;
+			remoteInfo = "MeetMe MessagesExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C8093A0527D09CF100E8FE85 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C80939F127D09CF000E8FE85 /* MeetMe MessagesExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C80939E727D09CEE00E8FE85 /* MeetMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C80939EA27D09CF000E8FE85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C80939F027D09CF000E8FE85 /* MeetMe MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "MeetMe MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C80939F527D09CF000E8FE85 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		C80939F827D09CF000E8FE85 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		C80939FB27D09CF000E8FE85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		C80939FD27D09CF100E8FE85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8093A0927D09D9C00E8FE85 /* DateTimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimePicker.swift; sourceTree = "<group>"; };
+		C8AC766127D9B444000CBF82 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		C8AC766927D9BB88000CBF82 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8BA6A6B27D3044700CF10AA /* ExpandedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C80939ED27D09CF000E8FE85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8AC766227D9B444000CBF82 /* EventKit.framework in Frameworks */,
+				C80939F627D09CF000E8FE85 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C80939E027D09CED00E8FE85 = {
+			isa = PBXGroup;
+			children = (
+				C80939E927D09CEE00E8FE85 /* MeetMe */,
+				C80939F727D09CF000E8FE85 /* MeetMe MessagesExtension */,
+				C80939F427D09CF000E8FE85 /* Frameworks */,
+				C80939E827D09CEE00E8FE85 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C80939E827D09CEE00E8FE85 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C80939E727D09CEE00E8FE85 /* MeetMe.app */,
+				C80939F027D09CF000E8FE85 /* MeetMe MessagesExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C80939E927D09CEE00E8FE85 /* MeetMe */ = {
+			isa = PBXGroup;
+			children = (
+				C80939EA27D09CF000E8FE85 /* Assets.xcassets */,
+			);
+			path = MeetMe;
+			sourceTree = "<group>";
+		};
+		C80939F427D09CF000E8FE85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8AC766127D9B444000CBF82 /* EventKit.framework */,
+				C80939F527D09CF000E8FE85 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C80939F727D09CF000E8FE85 /* MeetMe MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C80939F827D09CF000E8FE85 /* MessagesViewController.swift */,
+				C8BA6A6B27D3044700CF10AA /* ExpandedViewController.swift */,
+				C80939FA27D09CF000E8FE85 /* MainInterface.storyboard */,
+				C80939FD27D09CF100E8FE85 /* Assets.xcassets */,
+				C8AC766927D9BB88000CBF82 /* Info.plist */,
+				C8093A0927D09D9C00E8FE85 /* DateTimePicker.swift */,
+			);
+			path = "MeetMe MessagesExtension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C80939E627D09CEE00E8FE85 /* MeetMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8093A0627D09CF100E8FE85 /* Build configuration list for PBXNativeTarget "MeetMe" */;
+			buildPhases = (
+				C80939E527D09CEE00E8FE85 /* Resources */,
+				C8093A0527D09CF100E8FE85 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C80939F327D09CF000E8FE85 /* PBXTargetDependency */,
+			);
+			name = MeetMe;
+			productName = MeetMe;
+			productReference = C80939E727D09CEE00E8FE85 /* MeetMe.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		C80939EF27D09CF000E8FE85 /* MeetMe MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8093A0227D09CF100E8FE85 /* Build configuration list for PBXNativeTarget "MeetMe MessagesExtension" */;
+			buildPhases = (
+				C80939EC27D09CF000E8FE85 /* Sources */,
+				C80939ED27D09CF000E8FE85 /* Frameworks */,
+				C80939EE27D09CF000E8FE85 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MeetMe MessagesExtension";
+			productName = "MeetMe MessagesExtension";
+			productReference = C80939F027D09CF000E8FE85 /* MeetMe MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C80939E127D09CED00E8FE85 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					C80939E627D09CEE00E8FE85 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					C80939EF27D09CF000E8FE85 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = C80939E427D09CED00E8FE85 /* Build configuration list for PBXProject "MeetMe" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C80939E027D09CED00E8FE85;
+			productRefGroup = C80939E827D09CEE00E8FE85 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C80939E627D09CEE00E8FE85 /* MeetMe */,
+				C80939EF27D09CF000E8FE85 /* MeetMe MessagesExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C80939E527D09CEE00E8FE85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C80939EB27D09CF000E8FE85 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C80939EE27D09CF000E8FE85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C80939FE27D09CF100E8FE85 /* Assets.xcassets in Resources */,
+				C80939FC27D09CF000E8FE85 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C80939EC27D09CF000E8FE85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8BA6A6C27D3044700CF10AA /* ExpandedViewController.swift in Sources */,
+				C8093A0A27D09D9C00E8FE85 /* DateTimePicker.swift in Sources */,
+				C80939F927D09CF000E8FE85 /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C80939F327D09CF000E8FE85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C80939EF27D09CF000E8FE85 /* MeetMe MessagesExtension */;
+			targetProxy = C80939F227D09CF000E8FE85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C80939FA27D09CF000E8FE85 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C80939FB27D09CF000E8FE85 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C8093A0027D09CF100E8FE85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C8093A0127D09CF100E8FE85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8093A0327D09CF100E8FE85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYRQ523BUJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MeetMe MessagesExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MeetMe;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.MeetMe.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8093A0427D09CF100E8FE85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYRQ523BUJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "MeetMe MessagesExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = MeetMe;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.MeetMe.MessagesExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C8093A0727D09CF100E8FE85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYRQ523BUJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.MeetMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8093A0827D09CF100E8FE85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYRQ523BUJ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.stanford.MeetMe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C80939E427D09CED00E8FE85 /* Build configuration list for PBXProject "MeetMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8093A0027D09CF100E8FE85 /* Debug */,
+				C8093A0127D09CF100E8FE85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8093A0227D09CF100E8FE85 /* Build configuration list for PBXNativeTarget "MeetMe MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8093A0327D09CF100E8FE85 /* Debug */,
+				C8093A0427D09CF100E8FE85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8093A0627D09CF100E8FE85 /* Build configuration list for PBXNativeTarget "MeetMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8093A0727D09CF100E8FE85 /* Debug */,
+				C8093A0827D09CF100E8FE85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C80939E127D09CED00E8FE85 /* Project object */;
+}
