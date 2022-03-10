@@ -107,16 +107,6 @@ class MessagesViewController: MSMessagesAppViewController{
     @IBAction func didPress(button sender: AnyObject) {
         if let image = createImageForMessage(), let conversation = activeConversation {
             
-//            let session = self.activeConversation?.selectedMessage?.session
-//            let message = MSMessage(session: session ?? MSSession())
-//            let components = NSURLComponents()
-//            components.queryItems = [URLQueryItem(name: "title", value: .text),URLQueryItem
-//                (name:"yesCount",value:"\(rsvp.yes)"),
-//                URLQueryItem(name:"noCount",value:"\(rsvp.no)")]
-//
-//            message.url = components.url!
-//
-            
             
             let layout = MSMessageTemplateLayout()
             layout.image = image
@@ -127,7 +117,7 @@ class MessagesViewController: MSMessagesAppViewController{
             message.url = URL(string: "emptyURL")
             
             conversation.insert(message) { error in
-                print(error)
+                print("ERRRRRRRRRRR: \(error)")
             }
         }
     }
