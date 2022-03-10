@@ -7,54 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "32B1969C-A125-4BFB-B534-D932BEDA741D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MeetMe MessagesExtension/MessagesViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "didPress(button:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "32B1969C-A125-4BFB-B534-D932BEDA741D - 3096e3db4c288e45"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MeetMe_MessagesExtension.MessagesViewController.didPress(button: Swift.AnyObject) -&gt; ()"
-                  moduleName = "MeetMe MessagesExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mollycantillon/Downloads/MeetMe/MeetMe%20MessagesExtension/MessagesViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "108">
-               </Location>
-               <Location
-                  uuid = "32B1969C-A125-4BFB-B534-D932BEDA741D - 3096e3db4c288e45"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MeetMe_MessagesExtension.MessagesViewController.didPress(button: Swift.AnyObject) -&gt; ()"
-                  moduleName = "MeetMe MessagesExtension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mollycantillon/Downloads/MeetMe/MeetMe%20MessagesExtension/MessagesViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "156">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0545B3A6-0B3F-47B8-B65A-1833E1DA7684"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -62,8 +14,8 @@
             filePath = "MeetMe MessagesExtension/MessagesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "presentViewController(for:with:)"
             landmarkType = "7">
          </BreakpointContent>

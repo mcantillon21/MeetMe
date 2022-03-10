@@ -120,6 +120,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="vkD-Mt-CsM" firstAttribute="bottom" secondItem="1lU-fO-Qdv" secondAttribute="bottom" constant="21" id="6gT-n6-KN8"/>
                             <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="hFM-wu-2KS" secondAttribute="trailing" id="8mn-34-m2C"/>
                             <constraint firstItem="hFM-wu-2KS" firstAttribute="centerX" secondItem="VI0-Ly-dhs" secondAttribute="centerX" id="I2q-R9-PpL"/>
                             <constraint firstItem="hFM-wu-2KS" firstAttribute="top" secondItem="oqh-Bc-cCJ" secondAttribute="bottom" constant="20" id="KF3-2Z-kjo"/>

@@ -133,7 +133,8 @@ class MessagesViewController: MSMessagesAppViewController{
         if let image = createImageForMessage(), let conversation = activeConversation {
             let layout = MSMessageTemplateLayout()
             layout.image = image
-            layout.caption = "Be there or be square!"
+            layout.caption = "$\(conversation.localParticipantIdentifier.uuidString) wants to sync"
+//            layout.caption = "Be there or be square!"
              
             let message = MSMessage()
             message.layout = layout
