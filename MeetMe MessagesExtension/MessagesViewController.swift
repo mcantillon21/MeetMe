@@ -65,7 +65,6 @@ class MessagesViewController: MSMessagesAppViewController{
         super.viewDidLoad()
         textField.inputView = dateTimePicker.inputView
         self.label.text = dateText
-        // Make sure the prompt and ice cream view are showing the correct information.
         promptLabel.text = prompt
         // Do any additional setup after loading the view.
         let gestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(backgroundTap(gesture:)));
@@ -77,7 +76,12 @@ class MessagesViewController: MSMessagesAppViewController{
     @IBAction func createEventinTheCalendar(_ sender: Any) {
         var component = DateComponents()
         component.minute = actualDuration
-        createEventinTheCalendar(with: "Sync", forDate: actualDate, toDate: Calendar.current.date(byAdding: component, to: actualDate)!)
+//        contactName = activeConversation!.localParticipantIdentifier.uuidString
+//        contactName = activeConversation!.remoteParticipantIdentifiers[0].uuidString
+            createEventinTheCalendar(with: "In Sync <> Me", forDate: actualDate, toDate: Calendar.current.date(byAdding: component, to: actualDate)!)
+        
+//        [messageTemplateLayout setSubcaption:[NSString stringWithFormat:@"$%@",self.activeConversation.localParticipantIdentifier.UUIDString]];
+        
         
         //create alert to confirm
         let alert = UIAlertController(title: "Added to Calendar", message: "The event has been added to your calendar.", preferredStyle: .alert)
@@ -133,12 +137,21 @@ class MessagesViewController: MSMessagesAppViewController{
         if let image = createImageForMessage(), let conversation = activeConversation {
             let layout = MSMessageTemplateLayout()
             layout.image = image
-            layout.caption = "$\(conversation.localParticipantIdentifier.uuidString) wants to sync"
+//            layout.caption = "Let's sync!"
+            let name = conversation.localParticipantIdentifier.uuidString
+//            contactName = activeConversation!.remoteParticipantIdentifiers[0].uuidString
+            layout.caption = "$\(name) wants to sync"
 //            layout.caption = "Be there or be square!"
              
             let message = MSMessage()
             message.layout = layout
-            message.url = URL(string: "emptyURL")
+            
+            let components = NSURLComponents()
+            components.queryItems = [URLQueryItem(name: "dateText", value:
+                    dateText), URLQueryItem(name:"duration",value: duration)]
+            message.url = components.url!
+            
+            //message.url = URL(string: "emptyURL")
             
             conversation.insert(message) { error in
                 print("ERRRRRRRRRRR: \(error)")
@@ -198,6 +211,9 @@ class MessagesViewController: MSMessagesAppViewController{
         // extension on a remote device.
         
         // Use this method to trigger UI updates in response to the message.
+        let component = URLComponents(url: message.url!, resolvingAgainstBaseURL: false)
+        dateText = component!.queryItems![0].value!
+        duration = component!.queryItems![1].value!
     }
     
     override func didStartSending(_ message: MSMessage, conversation: MSConversation) {
@@ -214,28 +230,25 @@ class MessagesViewController: MSMessagesAppViewController{
         // Called before the extension transitions to a new presentation style.
     
         // Use this method to prepare for the change in presentation style.
+        
+
     }
     
     override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         // Called after the extension transitions to a new presentation style.
     
+        if presentationStyle == .expanded {
+            SelectButton.isHidden = true
+        } else {
+            SelectButton.isHidden = false
+        }
+        
         // Use this method to finalize any behaviors associated with the change in presentation style.
         guard let conversation = activeConversation else { fatalError("Expected an active converstation") }
         presentViewController(for: conversation, with: presentationStyle)
     }
     
     private func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
-        
-//        if presentationStyle == .expanded {
-//            SelectButton.isHidden = true
-//            let controller: UIViewController = storyboard!.instantiateViewController(withIdentifier: "MeetMeViewController") as! MessagesViewController
-//            addChild(controller)
-//            view.addSubview(controller.view)
-//        } else {
-        let controller: UIViewController = storyboard!.instantiateViewController(withIdentifier: "MeetMeViewController") as! MessagesViewController
-        addChild(controller)
-        view.addSubview(controller.view)
-//        }
     }
 
 }

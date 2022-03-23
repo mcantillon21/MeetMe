@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0545B3A6-0B3F-47B8-B65A-1833E1DA7684"
-            shouldBeEnabled = "No"
+            uuid = "B29D01EE-103A-4093-A773-0AF5A83715BD"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MeetMe MessagesExtension/MessagesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
-            landmarkName = "presentViewController(for:with:)"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "didPress(button:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

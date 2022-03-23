@@ -422,7 +422,7 @@
 				DONT_GENERATE_INFOPLIST_FILE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeetMe/Info.plist;
-				INFOPLIST_KEY_NSCalendarsUsageDescription = lol;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Add this event to your calendar. ";
 				INFOPLIST_KEY_NSRemindersUsageDescription = "Add to your Calendar";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -447,7 +447,7 @@
 				DONT_GENERATE_INFOPLIST_FILE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeetMe/Info.plist;
-				INFOPLIST_KEY_NSCalendarsUsageDescription = lol;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Add this event to your calendar. ";
 				INFOPLIST_KEY_NSRemindersUsageDescription = "Add to your Calendar";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
