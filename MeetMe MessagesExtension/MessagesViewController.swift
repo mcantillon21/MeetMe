@@ -50,12 +50,12 @@ class MessagesViewController: MSMessagesAppViewController{
         duration = "60 min"
         actualDuration = 60
     }
-
-//    @IBOutlet weak var lbl: UILabel!
-//    @IBAction func slider(_ sender: UISlider) {
-//        lbl.text = String(Int(sender.value))
-//    }
-
+    
+    //    @IBOutlet weak var lbl: UILabel!
+    //    @IBAction func slider(_ sender: UISlider) {
+    //        lbl.text = String(Int(sender.value))
+    //    }
+    
     private var prompt: String = "Pick a time"
     @IBOutlet weak var promptLabel: UILabel!
     
@@ -71,29 +71,29 @@ class MessagesViewController: MSMessagesAppViewController{
         view.addGestureRecognizer(gestureRecognizer)
         
     }
-
+    
     
     @IBAction func createEventinTheCalendar(_ sender: Any) {
         var component = DateComponents()
         component.minute = actualDuration
-//        contactName = activeConversation!.localParticipantIdentifier.uuidString
-//        contactName = activeConversation!.remoteParticipantIdentifiers[0].uuidString
-            createEventinTheCalendar(with: "In Sync <> Me", forDate: actualDate, toDate: Calendar.current.date(byAdding: component, to: actualDate)!)
+        //        contactName = activeConversation!.localParticipantIdentifier.uuidString
+        //        contactName = activeConversation!.remoteParticipantIdentifiers[0].uuidString
+        createEventinTheCalendar(with: "In Sync <> Me", forDate: actualDate, toDate: Calendar.current.date(byAdding: component, to: actualDate)!)
         
-//        [messageTemplateLayout setSubcaption:[NSString stringWithFormat:@"$%@",self.activeConversation.localParticipantIdentifier.UUIDString]];
+        //        [messageTemplateLayout setSubcaption:[NSString stringWithFormat:@"$%@",self.activeConversation.localParticipantIdentifier.UUIDString]];
         
         
         //create alert to confirm
         let alert = UIAlertController(title: "Added to Calendar", message: "The event has been added to your calendar.", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style{
-                case .default:
+            case .default:
                 print("default")
                 
-                case .cancel:
+            case .cancel:
                 print("cancel")
                 
-                case .destructive:
+            case .destructive:
                 print("destructive")
                 
             }
@@ -102,32 +102,32 @@ class MessagesViewController: MSMessagesAppViewController{
         
     }
     func createEventinTheCalendar(with title:String, forDate eventStartDate:Date, toDate eventEndDate:Date) {
-           
-           store.requestAccess(to: .event) { (success, error) in
-               if  error == nil {
-                   let event = EKEvent.init(eventStore: self.store)
-                   event.title = title
-                   event.calendar = self.store.defaultCalendarForNewEvents // this will return deafult calendar from device calendars
-                   event.startDate = eventStartDate
-                   event.endDate = eventEndDate
-                   
-                   let alarm = EKAlarm.init(absoluteDate: Date.init(timeInterval: -3600, since: event.startDate))
-                   event.addAlarm(alarm)
-                   
-                   do {
-                       try self.store.save(event, span: .thisEvent)
-                       //event created successfullt to default calendar
-                   } catch let error as NSError {
-                       print("failed to save event with error : \(error)")
-                   }
-
-               } else {
-                   //we have error in getting access to device calnedar
-                   print("error = \(String(describing: error?.localizedDescription))")
-               }
-           }
-       }
-
+        
+        store.requestAccess(to: .event) { (success, error) in
+            if  error == nil {
+                let event = EKEvent.init(eventStore: self.store)
+                event.title = title
+                event.calendar = self.store.defaultCalendarForNewEvents // this will return deafult calendar from device calendars
+                event.startDate = eventStartDate
+                event.endDate = eventEndDate
+                
+                let alarm = EKAlarm.init(absoluteDate: Date.init(timeInterval: -3600, since: event.startDate))
+                event.addAlarm(alarm)
+                
+                do {
+                    try self.store.save(event, span: .thisEvent)
+                    //event created successfullt to default calendar
+                } catch let error as NSError {
+                    print("failed to save event with error : \(error)")
+                }
+                
+            } else {
+                //we have error in getting access to device calnedar
+                print("error = \(String(describing: error?.localizedDescription))")
+            }
+        }
+    }
+    
     
     @objc func backgroundTap(gesture : UITapGestureRecognizer) {
         textField.resignFirstResponder() // or view.endEditing(true)
@@ -137,18 +137,18 @@ class MessagesViewController: MSMessagesAppViewController{
         if let image = createImageForMessage(), let conversation = activeConversation {
             let layout = MSMessageTemplateLayout()
             layout.image = image
-//            layout.caption = "Let's sync!"
+            //            layout.caption = "Let's sync!"
             let name = conversation.localParticipantIdentifier.uuidString
-//            contactName = activeConversation!.remoteParticipantIdentifiers[0].uuidString
+            //            contactName = activeConversation!.remoteParticipantIdentifiers[0].uuidString
             layout.caption = "$\(name) wants to sync"
-//            layout.caption = "Be there or be square!"
-             
+            //            layout.caption = "Be there or be square!"
+            
             let message = MSMessage()
             message.layout = layout
             
             let components = NSURLComponents()
             components.queryItems = [URLQueryItem(name: "dateText", value:
-                    dateText), URLQueryItem(name:"duration",value: duration)]
+                                                    dateText), URLQueryItem(name:"duration",value: duration)]
             message.url = components.url!
             
             //message.url = URL(string: "emptyURL")
@@ -162,30 +162,31 @@ class MessagesViewController: MSMessagesAppViewController{
     func createImageForMessage() -> UIImage? {
         let background = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
         background.backgroundColor = .white
-         
+        
         let label = UILabel(frame: CGRect(x: 60, y: 60, width: 180, height: 180))
         label.font = UIFont.systemFont(ofSize: 20.0)
         label.backgroundColor = .white
         label.textColor = .red
+        
         let result: String = dateText
-                label.numberOfLines = 0
-                label.text = result + "\n" + duration
-                label.textAlignment = .center
-                label.layer.cornerRadius = label.frame.size.width/2.0
-                label.clipsToBounds = true
-                 
-                background.addSubview(label)
-                background.frame.origin = CGPoint(x: view.frame.size.width, y: view.frame.size.height)
-                view.addSubview(background)
-                 
-                UIGraphicsBeginImageContextWithOptions(background.frame.size, false, UIScreen.main.scale)
-                background.drawHierarchy(in: background.bounds, afterScreenUpdates: true)
-                let image = UIGraphicsGetImageFromCurrentImageContext()
-                UIGraphicsEndImageContext()
-                 
-                background.removeFromSuperview()
-                 
-                return image
+        label.numberOfLines = 0
+        label.text = result + "\n" + duration
+        label.textAlignment = .center
+        label.layer.cornerRadius = label.frame.size.width/2.0
+        label.clipsToBounds = true
+        
+        background.addSubview(label)
+        background.frame.origin = CGPoint(x: view.frame.size.width, y: view.frame.size.height)
+        view.addSubview(background)
+        
+        UIGraphicsBeginImageContextWithOptions(background.frame.size, false, UIScreen.main.scale)
+        background.drawHierarchy(in: background.bounds, afterScreenUpdates: true)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        background.removeFromSuperview()
+        
+        return image
     }
     // MARK: - Conversation Handling
     
@@ -205,7 +206,7 @@ class MessagesViewController: MSMessagesAppViewController{
         // and store enough state information to restore your extension to its current state
         // in case it is terminated later.
     }
-   
+    
     override func didReceive(_ message: MSMessage, conversation: MSConversation) {
         // Called when a message arrives that was generated by another instance of this
         // extension on a remote device.
@@ -222,21 +223,21 @@ class MessagesViewController: MSMessagesAppViewController{
     
     override func didCancelSending(_ message: MSMessage, conversation: MSConversation) {
         // Called when the user deletes the message without sending it.
-    
+        
         // Use this to clean up state related to the deleted message.
     }
     
     override func willTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         // Called before the extension transitions to a new presentation style.
-    
+        
         // Use this method to prepare for the change in presentation style.
         
-
+        
     }
     
     override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         // Called after the extension transitions to a new presentation style.
-    
+        
         if presentationStyle == .expanded {
             SelectButton.isHidden = true
         } else {
@@ -250,5 +251,5 @@ class MessagesViewController: MSMessagesAppViewController{
     
     private func presentViewController(for conversation: MSConversation, with presentationStyle: MSMessagesAppPresentationStyle) {
     }
-
+    
 }
